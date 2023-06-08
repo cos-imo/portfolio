@@ -1,0 +1,70 @@
+@font-face {
+	font-family: chalkboard;
+	src: url(chalkboard.otf);
+}
+
+.subsection {
+  display : grid;
+  place-items: center;
+  align-content : center;
+  position : relative;
+  height: 100vh;
+  /*font-family : chalkboard;
+  color : white;
+}
+
+body{
+  background-color: black;*/
+}
+
+.partsection{
+  display : grid;
+  place-items: center;
+  align-content : center;
+  height: 1000vh;
+}
+
+/*
+.hidden{
+  opacity : 0;
+  filter : blur(5px);
+}
+*/
+
+.blur5{
+  opacity : 0;
+  filter : blur(5px);
+  transition : all 5s;
+}
+
+.blur2{
+  opacity : 0;
+  filter : blur(5px);
+  transition : all 2s;
+}
+
+.part{
+  position: sticky;
+  top : 20px;
+}
+
+.hidden-right-delay{
+  opacity : 0;
+  filter : blur(5px);
+  transform : translateX(100%);
+  transition : all 5s;
+}
+
+.show{
+  opacity : 1;
+  filter : blur(0);
+  transform : translateX(0);
+}
+
+.fixed{
+  position : absolute;
+}
+
+.unfixed{
+  position : relative;
+}

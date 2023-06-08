@@ -1,0 +1,11 @@
+{% extends 'display.html' %}
+
+{% block header %}
+    <!-- CSS -->
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/add.css') }}">
+{% endblock header %}
+
+{% block container %}
+    <h1>Accueil</h1><br>
+    Bref en gros ici y a plein de trucs dont mes projets <a href="/personnel">perso</a> mais aussi <a href="/scolaire">scolaires</a>
+{% endblock container %}
