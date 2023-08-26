@@ -8,7 +8,7 @@ Check out this README in other languages:
 
 • [French](README_fr.md)
 
-• [Chinese](README_zh.md)
+• [Chinese](README_ZH.md)
 
 ## About this project
 
