@@ -4,11 +4,11 @@
 
 Cette page est disponible en plusieurs langues:
 
-• [English](README.md)
+• [Anglais](README.md)
 
-• [French](README_fr.md)
+• [Français](README_fr.md)
 
-• [Chinese](README_ZH.md)
+• [Chinois](README_ZH.md)
 
 ## À propos
 
