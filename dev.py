@@ -19,6 +19,9 @@ def createApp() -> None:
     from py.blueprints.displayBP import displayBP
     app.register_blueprint(displayBP)
 
+    from py.blueprints.headersBP import headersBP
+    app.register_blueprint(headersBP)
+
     
     # Error 404 handler
     @app.errorhandler(404)

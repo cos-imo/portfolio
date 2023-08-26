@@ -16,12 +16,15 @@ app.register_blueprint(personnelBP)
 ## Import blueprint "scolaire"
 from py.blueprints.scolaireBP import scolaireBP
 app.register_blueprint(scolaireBP)
-## Import blueprint accueil
+## Import blueprint "accueil"
 from py.blueprints.accueilBP import accueilBP
 app.register_blueprint(accueilBP)
-## Import blueprint About
+## Import blueprint "About"
 from py.blueprints.liensBP import liensBP
 app.register_blueprint(liensBP)
+## Import headers blueprint
+from py.blueprints.headersBP import headersBP
+app.register_blueprint(headersBP)
 
 
 # Error 404 handler
