@@ -30,5 +30,4 @@ app.register_blueprint(headersBP)
 # Error 404 handler
 @app.errorhandler(404)
 def pageNotFound(error):
-    flash("HTTP 404 Not Found", "Red_flash")
-    return redirect('/display')
+    return redirect('/')
