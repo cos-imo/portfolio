@@ -25,6 +25,9 @@ app.register_blueprint(liensBP)
 ## Import headers blueprint
 from py.blueprints.headersBP import headersBP
 app.register_blueprint(headersBP)
+## Import advent of code blueprint
+from py.blueprints.aocBP import adventofcodeBP
+app.register_blueprint(adventofcodeBP)
 
 
 # Error 404 handler

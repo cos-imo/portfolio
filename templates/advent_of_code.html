@@ -1,0 +1,59 @@
+{% extends 'headers.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block container %}
+<div class="container py-4">
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Advent of code</h1>
+        <p class="col-md-8 fs-4">Bienvenue sur la page de présentation de l'Advent of Code. ici une courte intro blablabla</p>
+        <button class="btn btn-primary btn-lg" type="button" onclick="location.href='https://github.com/cos-imo/AdventOfCode';">Voir sur GitHub</button>
+        <button class="btn btn-primary btn-lg" type="button" href="/projects">Mes Projets</button>
+      </div>
+    </div>
+
+    <article class="my-3" id="accordion">
+
+        
+  
+        <div>
+          <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+          <div class="accordion" id="accordionExample">
+            {% for i in range(2015,2024) %}
+            <div class="accordion-item">
+              <h4 class="accordion-header" id="heading{{i}}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{i}}" aria-expanded="false" aria-controls="collapse{{i}}">
+                  {{i}}
+                </button>
+              </h4>
+              <div id="collapse{{i}}" class="accordion-collapse collapse" aria-labelledby="heading{{i}}" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="bd-example-snippet bd-code-snippet"><div class="bd-example">
+                        <ul class="list-group list-group-flush">
+                            {% for j in range(1,26) %}
+                              <li class="list-group-item">Jour {{j}}<p align="right">
+                              <button type="button" class="btn btn-secondary btn-sm">Partie 1</button>
+                              <button type="button" class="btn btn-secondary btn-sm">Partie 2</button>
+                              <button type="button" onclick="location.href='https://adventofcode.com/{{i}}/day/{{j}}'" class="btn btn-primary btn-sm">Voir énoncé</button></p></li>
+                            {% endfor %}
+                        </ul>
+                        </div></div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            
+          </div>
+          </div></div>
+  
+        </div>
+      </article>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2023
+    </footer>
+  </div>
+{% endblock container %}
