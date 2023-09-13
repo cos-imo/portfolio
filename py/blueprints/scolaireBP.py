@@ -5,6 +5,11 @@ from flask import Blueprint, request, render_template
 scolaireBP = Blueprint("scolaireBP", __name__)
 
 @scolaireBP.route('/scolaire', methods=['GET', 'POST'])
-def displayPersonnel() -> str:
+def afficherScolaire() -> str:
     if request.method == 'GET':
         return render_template("scolaire.html")
+    
+@scolaireBP.route('/projet', methods=['GET', 'POST'])
+def afficherProjetVide() -> str:
+    if request.method == 'GET':
+        return render_template("projet.html")

@@ -1,14 +1,69 @@
 {% extends 'headers.html' %}
 
 {% block header %}
-    <!-- CSS -->
-    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='css/add.css') }}">
 {% endblock header %}
 
 {% block container %}
-    <h1>Personnel</h1><br>
-    Blahblahblah mes projets persos blah blah blah
-    <h2>Github</h2>
-    Bon voilà la plupart de mes projets peuvent être retrouvés sur <a href="https://github.com/cos-imo">mon github</a><br>
-    En particulier si vous êtes un recruteur je vous conseille de jeter un oeuil à la <a href="https://github.com/cos-imo/AdventOfCode">page de mes travaux sur Advent Of Code</a>. POur mieux comprendre l'intérêt de ce projet, je vous conseille de commencer par lire le <a href="https://github.com/cos-imo/AdventOfCode/blob/main/README.md">disclaimer</a> (enfin, quand je l'aurais tapé)
+<div class="container py-4">
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Personnel</h1>
+        <p class="col-md-8 fs-4">Bienvenue sur la page regroupant les projets que j'ai pu accomplir en autonomie, de ma propre initiative</p>
+        <button class="btn btn-primary btn-lg" type="button" href="/projects">Mes Projets</button>
+        <button class="btn btn-secondary btn-lg" type="button" onclick="location.href='https://github.com/cos-imo';">Mon GitHub</button>
+      </div>
+    </div>
+
+    <article class="my-3" id="accordion">
+
+        
+        
+
+        <div class="my-3 p-3 bg-body rounded shadow-sm">
+            <h6 class="border-bottom pb-2 mb-0">Projets</h6>
+            <div class="d-flex text-muted pt-3">
+              <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        
+              <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                  <strong class="text-gray-dark">Portfolio</strong>
+                </div>
+                <span class="d-block">Le site sur lequel vous naviguez en ce moment même</span>
+              </div>
+            </div>
+            <div class="d-flex text-muted pt-3">
+              <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+        
+              <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                <div class="d-flex justify-content-between">
+                  <strong class="text-gray-dark">Advent Of Code</strong>
+                </div>
+                <span class="d-block">Afin de progresser encore un peu plus en algorithmie, mais aussi d'avoir une trace de mon travail, j'ai décidé de remplir un maximum des défis proposés par l'<a href="https://adventofcode.com">Advent Of Code</a></span>
+              </div>
+            </div>
+            <div class="d-flex text-muted pt-3">
+                <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
+          
+                <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-gray-dark">The Project Manager (TPM)</strong>
+                  </div>
+                  <span class="d-block">Au vu de la masse énorme de travail requise pour manager correctement un projet, j'ai décidé de faire appel à un site pour le faire à ma place</span>
+                </div>
+              </div>
+        
+            <small class="d-block text-end mt-3">
+              <a href="#">Tout mes projets</a>
+            </small>
+          </div>
+
+  
+    
+    </article>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+      &copy; 2023
+    </footer>
+  </div>
 {% endblock container %}

@@ -1,0 +1,78 @@
+{% extends 'headers.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block container %}
+
+<main>
+
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+    <h1>PPII Premier semestre</h1>
+    <p class="fs-5 col-md-8">Le PPII (Projet Pluridisciplinaire d'Informatique Intégrative) est le principal projet donné aux étudiants de Télécom Nancy en première année. Par groupe de 4, ils doivent désigner un chef de groupe et s'organiser pour rendre le projet à la fin du semestre.</p>
+
+    <div class="mb-5">
+      <a href="../examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>A Propos</h2>
+        <p>Votre objectif est (...) de concevoir et d’implémenter une application innovante dédiée à l’optimisation des ressources dans les vergers et potagers du territoire.<br>Extrait du sujet PVCC 1A 22/23x</p>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Membres</h2>
+        <p>Liste des membres ayant pris part au projet.</p>
+        <ul class="icon-list ps-0">
+          <li class="d-flex align-items-start mb-1">VESSE Léo</li>
+          <li class="d-flex align-items-start mb-1">AING Olivia</li>
+          <li class="d-flex align-items-start mb-1">LERUEZ Thomas</li>
+          <li class="d-flex align-items-start mb-1">UNGARO Cosimo</li>
+        </ul>
+      </div>
+    </div>
+
+  <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</div>
+<div class="container px-4 py-5" id="icon-grid">
+  <h2 class="pb-2 border-bottom">Languages</h2>
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+    <div class="col d-flex align-items-start">
+      <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#bootstrap"/></svg>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4">Python</h3>
+        <p>Mise en place de Flask et Algorithmie.</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#cpu-fill"/></svg>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4">Flask</h3>
+        <p>Utilisation du framework Flask.</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <path xmlns="http://www.w3.org/2000/svg" style="fill:url(#linearGradient1475);fill-opacity:1" d="m 85.637535,28.657169 v 11.90625 c 0,9.230755 -7.825895,16.999999 -16.75,17 h -26.78125 c -7.335833,0 -13.406249,6.278483 -13.40625,13.625 v 25.531247 c 0,7.266344 6.318588,11.540324 13.40625,13.625004 8.487331,2.49561 16.626237,2.94663 26.78125,0 6.750155,-1.95439 13.406253,-5.88761 13.40625,-13.625004 V 86.500919 h -26.78125 v -3.40625 h 26.78125 13.406254 c 7.792461,0 10.696251,-5.435408 13.406241,-13.59375 2.79933,-8.398886 2.68022,-16.475776 0,-27.25 -1.92578,-7.757441 -5.60387,-13.59375 -13.406241,-13.59375 z m -15.0625,64.65625 c 2.779478,3e-6 5.03125,2.277417 5.03125,5.093747 -2e-6,2.826354 -2.251775,5.125004 -5.03125,5.125004 -2.76955,0 -5.03125,-2.29865 -5.03125,-5.125004 2e-6,-2.81633 2.261697,-5.093747 5.03125,-5.093747 z" id="path1950"/>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4">HTML</h3>
+        <p>Pages codées en HTML.</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em"><use xlink:href="#home"/></svg>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4">CSS</h3>
+        <p>Design en CSS.</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  </main>
+
+{% endblock container %}
