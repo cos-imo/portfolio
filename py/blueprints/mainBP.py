@@ -14,3 +14,7 @@ def mainStatus() -> str:
 @mainBP.route('/display', methods=['GET','POST'])
 def display():
     return render_template("display.html")
+
+@mainBP.route('/connexion')
+def signin():
+    return render_template("signin.html")
