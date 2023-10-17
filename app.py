@@ -1,5 +1,6 @@
 # import des librairies essentielles
 from flask import Flask, flash, redirect
+import sqlite3
 
 
 app = Flask(__name__)
@@ -34,3 +35,20 @@ app.register_blueprint(adventofcodeBP)
 @app.errorhandler(404)
 def pageNotFound(error):
     return redirect('/')
+
+DATABASE = 'project.db'
+app.config['SESSION_TYPE'] = 'filesystem'
+app.secret_key = "anystringhere"
+
+def get_db():
+
+    db = getattr(g, DATABASE, None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, DATABASE, None)
+    if db is not None:
+        db.close()
