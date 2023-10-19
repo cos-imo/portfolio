@@ -55,31 +55,15 @@ def close_connection(exception):
 
 @app.route("/connexion", methods=['GET', 'POST'])
 def connexion_page():
-    # Si le formulaire est bien rempli...
     if request.method == 'POST' and request.form.get('identifiant') and request.form.get('password'):
-        print("connexion")
-        r = get_db().cursor()  # On créé un curseur
-        nom = request.form.get('name')  # On récupère les données du formulaire
+        r = sqlite3.connect(DATABASE).cursor()
+        nom = request.form.get('identifiant')
         mdp = bytes(request.form.get('password'), 'utf-8')
-        # On calcule le hash du mot de passe entré
         mass = hashlib.sha256(mdp).hexdigest()
-        # On récupère le hash de l'identifiant entré
         r.execute("SELECT motdepasse FROM utilisateurs WHERE identifiant=?", (nom,))
         tuple = r.fetchall()
         if not tuple:
             tuple=[[""]]
-        if tuple[0][0] == mass:  # Si les deux correspondent...
-            r = get_db().cursor()
-            r.execute("SELECT id FROM utilisateurs WHERE pseudo=?",
-                      (nom,))  # On récupère l'id
-            tuple = r.fetchall()[0][0]
-            session["id_utilisateur"] = tuple  # Et on le stocke dans session
-            rsession = get_db().cursor()
-            rsession.execute("SELECT statut FROM utilisateurs WHERE id={}".format(  # On récupère le statut (utilisateur ou producteur)
-                session["id_utilisateur"]))
-            session_type = rsession.fetchall()[0][0]
-            return render_template('signin.html')
-        else:
-            print("Connection failed")
-    # Si rien ne se passe (ou erreur) on recharge la même page
+        if tuple[0][0] == mass:
+            print("Connection succeeded")
     return render_template("signin.html")
